@@ -13,7 +13,7 @@ def resetar():
 ######FUNÇÃO 2
 def nvcoord(v1,v2):
     global x, y
-    if x<=79 | y<=25:
+    if (v1<=79) and (v2<=25):
         x=v1
         y=v2
 ######FUNÇÃO 3
@@ -22,15 +22,25 @@ def nvprint():
     screen.blit(ast_surface,(x,y))
     pygame.display.flip()
 
-######Teste
-
-    
-def teste():
+######Teste - Chama esta função informando número de tentativas
+def testecoord(ntestes):
+    import random
     erro=0
     acerto=0
-    for cont in range (10000)
+    global x, y
+    for cont in range (ntestes):
         nx = random.randint(-100,100)
         ny = random.randint(-100,100)
+        nvcoord(nx,ny)
+        #depois tentar usar "|"/"(condição) or (condição)"
+        if (x>79) or (x<0) or (y<0) or (y>25):
+            print ("x=%i y = %i"%(x, y))
+            erro = erro+1
+        else:
+            acerto = acerto+1
+    print ("Certos: %i \nErrados:%i"%(acerto,erro))
+            
+           
         
 
     
