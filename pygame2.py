@@ -22,7 +22,7 @@ def nvprint():
     screen.blit(ast_surface,(x,y))
     pygame.display.flip()
 
-######Teste - Chama esta função informando número de tentativas
+######Teste da função 1
 def testecoord(ntestes):
     import random
     erro=0
